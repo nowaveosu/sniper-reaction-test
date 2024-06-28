@@ -31,7 +31,9 @@ export default function Home() {
   };
 
   function getRandomSec() {
-    return (Math.random() * 10).toFixed(2);
+    const minSec = 5;
+    const maxSec = 10;
+    return (Math.random() * (maxSec - minSec) + minSec).toFixed(2); 
   }
 
   return (
