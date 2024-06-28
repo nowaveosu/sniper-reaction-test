@@ -35,9 +35,9 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-start h-screen"> 
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8"
         onClick={handleStart}
       >
         START
