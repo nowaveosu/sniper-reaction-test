@@ -12,6 +12,7 @@ export default function Home() {
   const handleStart = () => {
     setShowImage(true);
     startTimeRef.current = Date.now(); 
+    setRandomTimeout();
   };
 
   const handleImageClick = () => {
@@ -25,12 +26,12 @@ export default function Home() {
     const randomSec = getRandomSec();
     setTimeout(() => {
       setShowImage(true);
-      startTimeRef.current = Date.now();
+      startTimeRef.current = Date.now(); 
     }, +randomSec * 1000);
   };
 
   function getRandomSec() {
-    return (Math.random() * 5).toFixed(2) + 5;
+    return (Math.random() * 10).toFixed(2);
   }
 
   return (
@@ -45,12 +46,12 @@ export default function Home() {
         <Image
           src={bot}
           alt="Bot Image"
-          className="w-90 mt-4 cursor-pointer"
+          className="w-20 mt-4 cursor-pointer"
           onClick={handleImageClick}
         />
       )}
       {elapsedTime !== null && (
-        <p className="mt-2">reaction Time: {elapsedTime} ms</p>
+        <p className="mt-2">Elapsed Time: {elapsedTime} ms</p>
       )}
     </div>
   );
