@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import bot from "../../public/bot.png";
+import wall from "../../public/wall.png"
+import scope from "../../public/scope.png"
 import { useState, useRef } from "react";
 
 export default function Home() {
@@ -44,13 +46,30 @@ export default function Home() {
       >
         START
       </button>
+      <Image 
+            src={wall}
+            alt="Wall Image"
+            className="w-52 absolute top-20 left-52 z-30" 
+      />
+      <Image 
+            src={scope}
+            alt="Wall Image"
+            className="w-52 absolute top-20 left-52 z-40" 
+      />
       {showImage && (
+        <div
+        className="w-20 mt-4 cursor-pointer"
+        onClick={handleImageClick}
+        onContextMenu={(e) => e.preventDefault()} 
+        onDragStart={(e) => e.preventDefault()} 
+      >
+
         <Image
           src={bot}
           alt="Bot Image"
-          className="w-20 mt-4 cursor-pointer"
-          onClick={handleImageClick}
+          className="w-full relative z-20" 
         />
+      </div>
       )}
       {elapsedTime !== null && (
         <p className="mt-2">Elapsed Time: {elapsedTime} ms</p>
