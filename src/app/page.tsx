@@ -49,11 +49,11 @@ export default function Home() {
       <Image 
             src={wall}
             alt="Wall Image"
-            className="w-52 absolute top-20 left-52 z-30" 
+            className="w-20 absolute top-20 left-52 z-30" 
       />
       <Image 
             src={scope}
-            alt="Wall Image"
+            alt="Scope Image"
             className="w-52 absolute top-20 left-52 z-40" 
       />
       {showImage && (
