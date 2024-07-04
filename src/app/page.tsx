@@ -72,7 +72,7 @@ export default function Home() {
       </div>
       )}
       {elapsedTime !== null && (
-        <p className="mt-2">Elapsed Time: {elapsedTime} ms</p>
+        <p className="mt-2">reaction time : {elapsedTime} ms</p>
       )}
     </div>
   );
