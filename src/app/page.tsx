@@ -8,4 +8,14 @@ import { useState, useRef } from "react";
 
 export default function Home() {
 
+
+    return(
+        <div>
+            <div>
+                <Image src={bot} alt="bot image"/>
+            </div>
+            <button>start</button>
+        </div>
+        
+    )
 }
